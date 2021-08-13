@@ -20,8 +20,12 @@
 }
 
 
-@media (min-width: 250px) and (max-width: 767px) {
+@media (min-width: 250px) and (max-width: 500px) {
   .btn-text-display {
     display: none;
+  }
+
+  .icon-margin {
+    width: 25px;
   }
 }
