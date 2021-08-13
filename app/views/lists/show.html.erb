@@ -12,21 +12,26 @@
 </div>
 
 <div class="container my-5">
-  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3  g-4">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
     <% @list.bookmarks.each do |bookmark| %>
         <div class="col mb-3">
           <div class="card h-100 card-with-map">
             <img src="<%= bookmark.movie.poster_url%>" class="card-img-size card-img-top" alt="flat image">
-            <div class="card-body">
-              <h5 class="card-title"><%= bookmark.movie.title %></h5>
-              <p class="card-text"><%= bookmark.movie.overview%></p>
-              <p class="card-text">Rating: <%= bookmark.movie.rating%>/10</p>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div class="mb-4">
+                <h5 class="card-title"><%= bookmark.movie.title %></h5>
+                <p class="card-text"><%= bookmark.movie.overview%></p>
+              </div>
+              <div>
+                <p class="card-text">Rating: <%= bookmark.movie.rating%>/10</p>
+              </div>
             </div>
             <div class="card-footer">
               <small class="text-muted d-flex justify-content-center">
-                <%= link_to bookmark_path(bookmark), method: :delete do %>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">
                   <i class="icon-delete far fa-trash-alt"></i>
-                <% end %>
+                </button>
+                <%= render 'shared/modal', bookmark: bookmark %>
               </small>
             </div>
           </div>
