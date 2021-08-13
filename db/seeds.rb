@@ -49,12 +49,12 @@ end
 #   rating: 7.0
 # )
 
-List.create(
-  name: "Clasic movies",
-  image_url: "https://cdn.dribbble.com/users/2598141/screenshots/11444902/media/d3556b22f54a66ddc080dd90bbd2dd04.jpg?compress=1&resize=1600x1200"
-)
+# List.create(
+#   name: "Clasic movies",
+#   image_url: "https://cdn.dribbble.com/users/2598141/screenshots/11444902/media/d3556b22f54a66ddc080dd90bbd2dd04.jpg?compress=1&resize=1600x1200"
+# )
 
-List.create(
-  name: "Superhero",
-  image_url: "https://cdn.dribbble.com/users/4327707/screenshots/9391828/media/81a2461f8d6f977c5a2838c739d0bd0d.jpg?compress=1&resize=800x600"
-)
+# List.create(
+#   name: "Superhero",
+#   image_url: "https://cdn.dribbble.com/users/4327707/screenshots/9391828/media/81a2461f8d6f977c5a2838c739d0bd0d.jpg?compress=1&resize=800x600"
+# )

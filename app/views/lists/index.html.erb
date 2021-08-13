@@ -10,9 +10,13 @@
     <% @lists.each do |list| %>
         <div class="col">
           <%= link_to list_path(list) do %>
-            <div class="card-category mb-4" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.3)), url(<%= list.image_url %>); background-position: center;">
-              <%= list.name %>
-            </div>
+            <%# <div class="card-category mb-4" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.3)), url(<%= list.image_url %>
+            <%# ); background-position: center;"> %>
+            <% if list.image_url.attached? %>
+              <div class="card-category mb-4" style="background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.3)), url('<%= cl_image_path list.image_url.key, height: 300, crop: :fill %>'); background-position: center;">
+                <%= list.name %>
+              </div>
+            <% end %>
           <% end %>
         </div>
     <% end %>
